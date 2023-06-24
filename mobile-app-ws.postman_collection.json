@@ -1,0 +1,1409 @@
+{
+	"info": {
+		"_postman_id": "bfcae583-e3c1-4621-a2c1-84040082ec48",
+		"name": "mobile-app-ws",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14185792"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"firstName02\",\r\n    \"lastName\":\"lastName02\",\r\n    \"email\":\"\",\r\n    \"password\":\"123\",\r\n    \"addresses\":[\r\n        {\r\n            \"city\":\"city02\",\r\n            \"country\":\"country02\",\r\n            \"streetName\":\"streetName02\",\r\n            \"postalCode\":\"abc02\",\r\n            \"type\":\"billing\"\r\n        },\r\n        {\r\n            \"city\":\"city02\",\r\n            \"country\":\"country02\",\r\n            \"streetName\":\"streetName02\",\r\n            \"postalCode\":\"abc02\",\r\n            \"type\":\"shipping\"\r\n        }\r\n    ]\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mobile-app-ws/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mobile-app-ws",
+						"users"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "register success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"firstName02\",\r\n    \"lastName\":\"lastName02\",\r\n    \"email\":\"email02@test.com\",\r\n    \"password\":\"123\",\r\n    \"addresses\":[\r\n        {\r\n            \"city\":\"city02\",\r\n            \"country\":\"country02\",\r\n            \"streetName\":\"streetName02\",\r\n            \"postalCode\":\"abc02\",\r\n            \"type\":\"billing\"\r\n        },\r\n        {\r\n            \"city\":\"city02\",\r\n            \"country\":\"country02\",\r\n            \"streetName\":\"streetName02\",\r\n            \"postalCode\":\"abc02\",\r\n            \"type\":\"shipping\"\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 14:56:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": \"B2vCPHZHQQnYLpWxDRUTwE7BtticZQ\",\n    \"firstName\": \"firstName02\",\n    \"lastName\": \"lastName02\",\n    \"email\": \"email02@test.com\",\n    \"addresses\": [\n        {\n            \"addressId\": \"qiI870YmtQzYzlOb35pih3KCHAYRoH\",\n            \"city\": \"city02\",\n            \"country\": \"country02\",\n            \"streetName\": \"streetName02\",\n            \"postalCode\": \"abc02\",\n            \"type\": \"billing\"\n        },\n        {\n            \"addressId\": \"PdQXu5QxeX6l7PCnd6xfrT9E4wX0xD\",\n            \"city\": \"city02\",\n            \"country\": \"country02\",\n            \"streetName\": \"streetName02\",\n            \"postalCode\": \"abc02\",\n            \"type\": \"shipping\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "register already exists",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"firstName02\",\r\n    \"lastName\":\"lastName02\",\r\n    \"email\":\"email02@test.com\",\r\n    \"password\":\"123\",\r\n    \"addresses\":[\r\n        {\r\n            \"city\":\"city02\",\r\n            \"country\":\"country02\",\r\n            \"streetName\":\"streetName02\",\r\n            \"postalCode\":\"abc02\",\r\n            \"type\":\"billing\"\r\n        },\r\n        {\r\n            \"city\":\"city02\",\r\n            \"country\":\"country02\",\r\n            \"streetName\":\"streetName02\",\r\n            \"postalCode\":\"abc02\",\r\n            \"type\":\"shipping\"\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 14:57:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2023-06-24T14:57:00.344+00:00\",\n    \"message\": \"Record already exists\"\n}"
+				},
+				{
+					"name": "register failed missing required field",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"firstName02\",\r\n    \"lastName\":\"lastName02\",\r\n    \"email\":\"\",\r\n    \"password\":\"123\",\r\n    \"addresses\":[\r\n        {\r\n            \"city\":\"city02\",\r\n            \"country\":\"country02\",\r\n            \"streetName\":\"streetName02\",\r\n            \"postalCode\":\"abc02\",\r\n            \"type\":\"billing\"\r\n        },\r\n        {\r\n            \"city\":\"city02\",\r\n            \"country\":\"country02\",\r\n            \"streetName\":\"streetName02\",\r\n            \"postalCode\":\"abc02\",\r\n            \"type\":\"shipping\"\r\n        }\r\n    ]\r\n    \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:03:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"timestamp\": \"2023-06-24T15:03:50.269+00:00\",\n    \"message\": \"Missing required field. Please check documentation for required fields\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get user by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbWFpbDAxQHRlc3QuY29tIiwiZXhwIjoxNjg4NDgzMTA2LCJpYXQiOjE2ODc2MTkxMDZ9.hpbrA5bW5Djo9pwVXo4QwY9QBAzK8WRA2wEH1Jy1vN64QqowfveS8NiQCFd99-zEFYGQwQKzmPxYPLWPPeIcOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mobile-app-ws",
+						"users",
+						"9aFqrzHw45vfKM9ONjbvDZLwG0wgni"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get user by id success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users",
+								"9aFqrzHw45vfKM9ONjbvDZLwG0wgni"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:06:21 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": \"9aFqrzHw45vfKM9ONjbvDZLwG0wgni\",\n    \"firstName\": \"firstName01\",\n    \"lastName\": \"lastName01\",\n    \"email\": \"email01@test.com\",\n    \"addresses\": null\n}"
+				},
+				{
+					"name": "get user by id failed wrong token",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users",
+								"9aFqrzHw45vfKM9ONjbvDZLwG0wgni"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:06:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"email01@test.com\",\r\n    \"password\":\"123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mobile-app-ws/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mobile-app-ws",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"email01@test.com\",\r\n    \"password\":\"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "Authorization",
+							"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbWFpbDAxQHRlc3QuY29tIiwiZXhwIjoxNjg4NDgzMTA2LCJpYXQiOjE2ODc2MTkxMDZ9.hpbrA5bW5Djo9pwVXo4QwY9QBAzK8WRA2wEH1Jy1vN64QqowfveS8NiQCFd99-zEFYGQwQKzmPxYPLWPPeIcOw"
+						},
+						{
+							"key": "UserId",
+							"value": "9aFqrzHw45vfKM9ONjbvDZLwG0wgni"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:05:06 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "register format xml",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/xml",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<UserDetailsRequestModel>\r\n<firstName>firstName4</firstName>\r\n<lastName>lastName4</lastName>\r\n<email>email04@test.com</email>\r\n<password>123</password>\r\n</UserDetailsRequestModel>",
+					"options": {
+						"raw": {
+							"language": "xml"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbWFpbDAxQHRlc3QuY29tIiwiZXhwIjoxNjg4NDgzMTA2LCJpYXQiOjE2ODc2MTkxMDZ9.hpbrA5bW5Djo9pwVXo4QwY9QBAzK8WRA2wEH1Jy1vN64QqowfveS8NiQCFd99-zEFYGQwQKzmPxYPLWPPeIcOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstName\":\"firstName3update\",\r\n    \"lastName\":\"lastName3update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mobile-app-ws",
+						"users",
+						"9aFqrzHw45vfKM9ONjbvDZLwG0wgni"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "update user success",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\":\"firstName3update\",\r\n    \"lastName\":\"lastName3update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users",
+								"9aFqrzHw45vfKM9ONjbvDZLwG0wgni"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:09:00 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"userId\": \"9aFqrzHw45vfKM9ONjbvDZLwG0wgni\",\n    \"firstName\": \"firstName3update\",\n    \"lastName\": \"lastName3update\",\n    \"email\": \"email01@test.com\",\n    \"addresses\": null\n}"
+				}
+			]
+		},
+		{
+			"name": "delete user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbWFpbDAxQHRlc3QuY29tIiwiZXhwIjoxNjg4NDgzMTA2LCJpYXQiOjE2ODc2MTkxMDZ9.hpbrA5bW5Djo9pwVXo4QwY9QBAzK8WRA2wEH1Jy1vN64QqowfveS8NiQCFd99-zEFYGQwQKzmPxYPLWPPeIcOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mobile-app-ws",
+						"users",
+						"9aFqrzHw45vfKM9ONjbvDZLwG0wgni"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "delete user success",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users",
+								"9aFqrzHw45vfKM9ONjbvDZLwG0wgni"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:15:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"operationResult\": \"SUCCESS\",\n    \"operationName\": \"DELETE\"\n}"
+				}
+			]
+		},
+		{
+			"name": "get user by page and limit",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbWFpbDAxQHRlc3QuY29tIiwiZXhwIjoxNjg4NDgzMTA2LCJpYXQiOjE2ODc2MTkxMDZ9.hpbrA5bW5Djo9pwVXo4QwY9QBAzK8WRA2wEH1Jy1vN64QqowfveS8NiQCFd99-zEFYGQwQKzmPxYPLWPPeIcOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/mobile-app-ws/users?page=2&limit=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mobile-app-ws",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get user by page and limit success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users?page=1&limit=2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "limit",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:10:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"userId\": \"9aFqrzHw45vfKM9ONjbvDZLwG0wgni\",\n        \"firstName\": \"firstName3update\",\n        \"lastName\": \"lastName3update\",\n        \"email\": \"email01@test.com\",\n        \"addresses\": null\n    },\n    {\n        \"userId\": \"B2vCPHZHQQnYLpWxDRUTwE7BtticZQ\",\n        \"firstName\": \"firstName02\",\n        \"lastName\": \"lastName02\",\n        \"email\": \"email02@test.com\",\n        \"addresses\": null\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get list address",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbWFpbDAxQHRlc3QuY29tIiwiZXhwIjoxNjg4NDgzMTA2LCJpYXQiOjE2ODc2MTkxMDZ9.hpbrA5bW5Djo9pwVXo4QwY9QBAzK8WRA2wEH1Jy1vN64QqowfveS8NiQCFd99-zEFYGQwQKzmPxYPLWPPeIcOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni/addresses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mobile-app-ws",
+						"users",
+						"9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+						"addresses"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get list address success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni/addresses",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users",
+								"9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+								"addresses"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:11:47 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"addressId\": \"wEb4GPC41DkeFZPuTdreHOCSoPcB5D\",\n        \"city\": \"city01\",\n        \"country\": \"country01\",\n        \"streetName\": \"streetName01\",\n        \"postalCode\": \"abc01\",\n        \"type\": \"billing\"\n    },\n    {\n        \"addressId\": \"f1Xrsu5j7DdEoX5oos5wuv2ka2eQHn\",\n        \"city\": \"city01\",\n        \"country\": \"country01\",\n        \"streetName\": \"streetName01\",\n        \"postalCode\": \"abc01\",\n        \"type\": \"shipping\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "get address by address id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJlbWFpbDAxQHRlc3QuY29tIiwiZXhwIjoxNjg4NDgzMTA2LCJpYXQiOjE2ODc2MTkxMDZ9.hpbrA5bW5Djo9pwVXo4QwY9QBAzK8WRA2wEH1Jy1vN64QqowfveS8NiQCFd99-zEFYGQwQKzmPxYPLWPPeIcOw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni/addresses/wEb4GPC41DkeFZPuTdreHOCSoPcB5D",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mobile-app-ws",
+						"users",
+						"9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+						"addresses",
+						"wEb4GPC41DkeFZPuTdreHOCSoPcB5D"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "get address by address id success",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/mobile-app-ws/users/9aFqrzHw45vfKM9ONjbvDZLwG0wgni/addresses/wEb4GPC41DkeFZPuTdreHOCSoPcB5D",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"mobile-app-ws",
+								"users",
+								"9aFqrzHw45vfKM9ONjbvDZLwG0wgni",
+								"addresses",
+								"wEb4GPC41DkeFZPuTdreHOCSoPcB5D"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Vary",
+							"value": "Origin"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Method"
+						},
+						{
+							"key": "Vary",
+							"value": "Access-Control-Request-Headers"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Sat, 24 Jun 2023 15:13:51 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"addressId\": \"wEb4GPC41DkeFZPuTdreHOCSoPcB5D\",\n    \"city\": \"city01\",\n    \"country\": \"country01\",\n    \"streetName\": \"streetName01\",\n    \"postalCode\": \"abc01\",\n    \"type\": \"billing\"\n}"
+				}
+			]
+		}
+	]
+}
